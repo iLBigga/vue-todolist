@@ -1,0 +1,8 @@
+body {
+    background-color: grey;
+}
+
+.done{
+    color: lightgray;
+    text-decoration: line-through;
+}
