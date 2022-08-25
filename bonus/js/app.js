@@ -53,7 +53,7 @@ const app = new Vue({
         },
         enterClick(event) {
             if(event.key === 'Enter'){
-                this.addTodo()
+                this.addTodo();
             };
         },
     },

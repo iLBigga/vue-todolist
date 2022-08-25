@@ -13,7 +13,7 @@
     <div id="app">
         <div class="container">
             <header>
-                <h1>TODOLIST</h1>
+                <h1>TODOLIST BONUS</h1>
             </header>
             <main>
                 <div class="input">
@@ -22,7 +22,8 @@
                 </div>
                 <h2>Cose da Fare</h2>
                 <ul class="list">
-                    <li class="list-el"
+                    <li 
+                    class="list-el"
                     v-for="(todo,index) in todos"
                     :class="todo.done ? 'done' : ''">
                         <span class="list-text" @click="check(todo)">{{ todo.text }}</span>
@@ -31,18 +32,16 @@
                 </ul>
                 <h2>Completato</h2>
                 <ul class="list">
-                    <li class="list-el"
-                    v-for="todo in isDone"
-                    class="done">
+                    <li 
+                    class="list-el done"
+                    v-for="todo in isDone">
                         {{ todo.text }}
                         <i @click="check(todo)" class="fa-solid fa-check"></i>
                     </li>
                 </ul>
             </main>
         </div>
-
     </div>
-
     <script src="./js/app.js"></script>
 </body>
 </html>

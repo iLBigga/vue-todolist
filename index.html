@@ -19,11 +19,11 @@
                 <div class="input">
                     <input class="input-el" v-model="newTodo" type="text">
                     <input class="input-el" @click="addTodo" type="button" value="Aggiungi">
-
                 </div>
-    
+                <h2>Cose da Fare</h2>
                 <ul class="list">
-                    <li class="list-el"
+                    <li 
+                    class="list-el"
                     v-for="(todo,index) in todos"
                     :class="todo.done ? 'done' : ''">
                         {{ todo.text }}
@@ -32,9 +32,7 @@
                 </ul>
             </main>
         </div>
-
     </div>
-
     <script src="./js/app.js"></script>
 </body>
 </html>
