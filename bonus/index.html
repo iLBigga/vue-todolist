@@ -20,7 +20,7 @@
                     <input class="input-el" v-model="newTodo" @keypress="enterClick" type="text">
                     <input class="input-el" @click="addTodo" type="button" value="Aggiungi">
                 </div>
-    
+                <h2>Cose da Fare</h2>
                 <ul class="list">
                     <li class="list-el"
                     v-for="(todo,index) in todos"
@@ -29,11 +29,11 @@
                         <i @click="check(todo)" class="fa-solid fa-check"></i>
                     </li>
                 </ul>
+                <h2>Completato</h2>
                 <ul class="list">
                     <li class="list-el"
-                    v-for="(todo,index) in todos"
-                    v-if="todo.done"
-                    :class="todo.done ? 'done' : ''">
+                    v-for="todo in isDone"
+                    class="done">
                         {{ todo.text }}
                         <i @click="check(todo)" class="fa-solid fa-check"></i>
                     </li>
