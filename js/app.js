@@ -33,10 +33,14 @@ const app = new Vue({
             todo.done = !todo.done;
         },
         addTodo(){
-            this.todos.push({
-                text: this.newTodo,
-                done: false,
-            });
+            this.newTodo = this.newTodo.trim();            
+            if(this.newTodo){
+                this.todos.push({
+                    text: this.newTodo,
+                    done: false,
+                });
+            };
+            this.newTodo = '';
         },
     },
 });
