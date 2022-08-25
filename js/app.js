@@ -9,7 +9,7 @@ const todos = [
     },
     {
         text: 'Fare il bucato',
-        done: true,
+        done: false,
     },
     {
         text: 'Portare fuori il cane',
@@ -26,10 +26,17 @@ const app = new Vue({
     el: '#app',
     data: {
         todos,
+        newTodo: '',
     },
     methods: {
         check(todo){
             todo.done = !todo.done;
         },
+        addTodo(){
+            this.todos.push({
+                text: this.newTodo,
+                done: false,
+            });
+        },
     },
-})
+});

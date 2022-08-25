@@ -12,11 +12,11 @@
 <body>
     <div id="app">
         <header>
-            <h1></h1>
+            <h1>TODOLIST</h1>
         </header>
         <main>
-            <input type="text">
-            <input type="buttom" value="Aggiungi">
+            <input v-model="newTodo" type="text">
+            <input @click="addTodo" type="button" value="Aggiungi">
 
             <ul>
                 <li 
