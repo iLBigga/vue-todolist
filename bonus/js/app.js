@@ -29,12 +29,13 @@ const app = new Vue({
         newTodo: '',
     },
     computed: {
-        isDone(){
-            let check = [];
-            this.todos.forEach(element => {
-                if(element.done) check.push(element)
-            });
-            return check
+        completeTodos: function() {
+            // let check = [];
+            // this.todos.forEach(element => {
+            //     if(element.done) check.push(element)
+            // });
+            // return check
+            return this.todos.filter(({ done }) => done)
         },
     },
     methods: {
@@ -50,11 +51,6 @@ const app = new Vue({
                 });
             };
             this.newTodo = '';
-        },
-        enterClick(event) {
-            if(event.key === 'Enter'){
-                this.addTodo();
-            };
         },
     },
 });
